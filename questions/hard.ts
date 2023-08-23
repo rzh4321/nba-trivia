@@ -1,6 +1,6 @@
 import {MCQuestionType, TFQuestionType} from '../types';
 
-export const easyMC : MCQuestionType[] = [
+export const hardMC : MCQuestionType[] = [
     {
         question: 'test',
         choices: ['a,', 'b', 'c', 'd'],
@@ -351,33 +351,12 @@ export const easyMC : MCQuestionType[] = [
     }
 ]
 
-export const easyTF : TFQuestionType[] = [
+export const hardTF : TFQuestionType[] = [
     {
         question: 'question',
         correct: 't',
         index: 0,
-    },
-    {
-        question: 'question',
-        correct: 't',
-        index: 0,
-    },
-    {
-        question: 'question',
-        correct: 't',
-        index: 0,
-    },
-    {
-        question: 'question',
-        correct: 't',
-        index: 0,
-    },
-    {
-        question: 'question',
-        correct: 't',
-        index: 0,
-    },
-    {
+    },    {
         question: 'question',
         correct: 't',
         index: 0,
