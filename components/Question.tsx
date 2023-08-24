@@ -1,5 +1,4 @@
 import { MCQuestionType, TFQuestionType } from "../types";
-import { useEffect } from "react";
 import React from "react";
 import Choice from "./Choice";
 import "../src/Question.css";
@@ -14,14 +13,9 @@ type QuestionType = {
 
 const Question = React.memo(
   ({ ind, question, handleChange, submitted, userAnswer }: QuestionType) => {
-    let choices: string[] = [];
-    if (question.choices) {
-      choices = [];
-      for (const choice of question.choices) {
-        choices.push(choice);
-      }
-    } else {
-      choices.push("True", "False");
+    const choices: string[] = [];
+    for (const choice of question.choices) {
+      choices.push(choice);
     }
     const choiceElements = choices.map((choice) => (
       <Choice

@@ -6,6 +6,7 @@ export type MCQuestionType = {
 
 export type TFQuestionType = {
   question: string;
+  choices: ["True", "False"];
   correct: string;
 };
 

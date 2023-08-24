@@ -1,6 +1,5 @@
 import { settingsType } from "../types";
 import "../src/StartScreen.css";
-import { useEffect } from "react";
 
 type StartScreenProps = {
   settings: settingsType;

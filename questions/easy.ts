@@ -362,93 +362,114 @@ export const easyTF: TFQuestionType[] = [
   {
     question: "Michael Jordan is often referred to as 'His Airness.'",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Larry Bird played his entire NBA career with the Boston Celtics.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The NBA is the only major professional sports league in North America that does not have a salary cap.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "Wilt Chamberlain scored 100 points in a single NBA game.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question: "The Phoenix Suns have never won an NBA Championship.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Shaquille O'Neal was known for his excellent free-throw shooting.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The Toronto Raptors are the only Canadian team in the NBA.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The New York Knicks play their home games at Madison Square Garden.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Kareem Abdul-Jabbar is the all-time leading scorer in NBA history.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question:
       "Dennis Rodman won multiple NBA championships with the Los Angeles Lakers.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Los Angeles Clippers have more NBA Championships than the Los Angeles Lakers.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The NBA Finals is a best-of-seven series.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Boston Celtics and Los Angeles Lakers have one of the most famous rivalries in NBA history.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The term 'Triple-Double' in basketball refers to a player recording ten or more points, rebounds, and assists in a game.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Detroit Pistons are often associated with their 'Bad Boys' era in the 1990s.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Vince Carter, a legendary NBA player, was known for his high-flying dunks.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The 'Hack-a-Shaq' strategy involved intentionally fouling Shaquille O'Neal to send him to the free-throw line.",
     correct: "True",
+    choices: ["True", "False"],
   },
+
   {
     question: "The NBA's shot clock lasts for 30 seconds.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The San Antonio Spurs have never won an NBA championship.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The Los Angeles Lakers' colors are purple and gold.",
     correct: "True",
+    choices: ["True", "False"],
   },
 ];

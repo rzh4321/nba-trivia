@@ -189,69 +189,85 @@ export const hardTF: TFQuestionType[] = [
     question:
       "The three-point line was introduced to the NBA in the 1979-1980 season.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The NBA was founded in 1946 as the BAA (Basketball Association of America).",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Cleveland Cavaliers became a regular playoff contender by 2001",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "Jarrett Culver was traded for Patrick Beverley",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Warriors played the Utah Jazz in the second roun of the 2006-07 playoffs",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Golden State Warriors beat the Utah Jazz to break the franchise record for most wins in a regular season.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "The Golden State Warriors played their first game at the Chase Center in 2019.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question: "Grayson Allen was traded for a first round pick.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The New York Knicks selected Rod Strickland in the first round.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Scottie Pippen's previous team before the Bulls was the Portland Trailblazers.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Michael Jordan finished the 1994 season leading the Bulls in every major statistical category.",
     correct: "False",
+    choices: ["True", "False"],
   },
+
   {
     question: "The Chicago Bulls started their first three-peat in 1991.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question:
       "Landry Shamet and Mike Scott were traded together from the 76ers.",
     correct: "False",
+    choices: ["True", "False"],
   },
   {
     question: "The New York Knick's third longest winning streak is 13.",
     correct: "True",
+    choices: ["True", "False"],
   },
   {
     question: "The New York Knick's longest losing streak is 14.",
     correct: "False",
+    choices: ["True", "False"],
   },
 ];
