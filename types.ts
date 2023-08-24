@@ -2,13 +2,11 @@ export type MCQuestionType = {
     question: string;
     choices: string[];
     correct: string;
-    index: number;
 };
 
 export type TFQuestionType = {
     question: string;
-    correct: string;
-    index: number;
+    correct: boolean;
 };
 
 export type settingsType = {
@@ -16,4 +14,3 @@ export type settingsType = {
     difficulty: 'easy' | 'medium' | 'hard' | 'any';
     type: 'mc' | 'tf' | 'any';
 }
-

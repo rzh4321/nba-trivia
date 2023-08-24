@@ -5,6 +5,7 @@ import {
   getHardQuestions,
 } from "../utils";
 import StartScreen from "../components/StartScreen";
+import QuestionPage from "../components/QuestionPage";
 import "./App.css";
 
 import { useEffect, useState } from "react";
@@ -37,11 +38,15 @@ function App() {
 
   return (
     <>
-      <StartScreen
+      {
+        start? 
+        (<StartScreen
         settings={settings}
         setSettings={setSettings}
         handleClick={handleClick}
-      ></StartScreen>
+      ></StartScreen>) :
+      <QuestionPage setStart={setStart} questions={questions} handleClick={handleClick} />
+      }
     </>
   );
 }
