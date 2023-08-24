@@ -6,7 +6,7 @@ export type MCQuestionType = {
 
 export type TFQuestionType = {
     question: string;
-    correct: boolean;
+    correct: string;
 };
 
 export type settingsType = {

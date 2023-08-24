@@ -15,7 +15,7 @@ function getRandomElementsFromArray(
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
-
+  console.log('in getRandomElements')
   // Slice the shuffled array to get the desired number of elements
   return shuffledArray.slice(0, numElements);
 }
@@ -24,7 +24,9 @@ export function getEasyQuestions(
   number: number,
   type: string,
 ): (MCQuestionType | TFQuestionType)[] {
+    console.log('in getEasyQuestions')
   if (type == "mc") {
+    console.log('u chose mc, calling getRandomElements')
     return getRandomElementsFromArray(easyMC, number);
   } 
   else if (type == 'tf') {
@@ -63,4 +65,18 @@ export function getMediumQuestions(
       }
   }
   
+  export function getAnyDiff(
+    number: number,
+    type: string,
+  ): (MCQuestionType | TFQuestionType)[] {
+    if (type == "mc") {
+      return getRandomElementsFromArray([...easyMC, ...mediumMC, ...hardMC], number);
+    } else if (type == 'tf') {
+      return getRandomElementsFromArray([...easyTF, ...mediumTF, ...hardTF], number);
+    }
+    // any difficulty, any type
+    else {
+        return getRandomElementsFromArray([...easyTF, ...mediumTF, ...hardTF, ...easyMC, ...mediumMC, ...hardMC], number)
+      }
+  }
   

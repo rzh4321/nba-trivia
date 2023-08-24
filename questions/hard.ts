@@ -121,75 +121,104 @@ export const hardMC : MCQuestionType[] = [
 export const hardTF : TFQuestionType[] = [
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
     },
 
     {
         question: 'question',
-        correct: true,
-    },    {
-        question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
     },
     {
         question: 'question',
-        correct: true,
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
+    },
+    {
+        question: 'question',
+        correct: "True",
     },
 ]
 

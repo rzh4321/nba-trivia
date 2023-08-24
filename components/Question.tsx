@@ -1,4 +1,7 @@
 import { MCQuestionType, TFQuestionType } from "../types";
+import { useEffect } from "react";
+import React from "react";
+import Choice from './Choice';
 
 type QuestionType = {
   ind: number;
@@ -8,13 +11,19 @@ type QuestionType = {
   userAnswer: boolean | string | undefined;
 };
 
-export default function Question({
+const Question = React.memo(({
   ind,
   question,
   handleChange,
   submitted,
   userAnswer,
-}: QuestionType) {
+}: QuestionType) => {
+
+    useEffect(() => {
+        console.log('hi')
+      })
+    
+
   let choices: string[] = [];
   if (question.choices) {
     choices = [];
@@ -27,6 +36,7 @@ export default function Question({
   const choiceElements = choices.map((choice) => (
     <Choice
       key={choice}
+      ind={ind}
       choice={choice}
       handleChange={handleChange}
       selected={choice === userAnswer}
@@ -55,4 +65,6 @@ export default function Question({
       </div>
     </>
   );
-}
+})
+
+export default Question;

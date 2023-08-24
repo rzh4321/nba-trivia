@@ -3,6 +3,7 @@ import {
   getEasyQuestions,
   getMediumQuestions,
   getHardQuestions,
+  getAnyDiff
 } from "../utils";
 import StartScreen from "../components/StartScreen";
 import QuestionPage from "../components/QuestionPage";
@@ -21,9 +22,14 @@ function App() {
     type: "any",
   });
 
+  useEffect(() => {
+    console.log('rendering APp')
+  })
+
   function handleClick(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ): void {
+    console.log('in handle click')
     e.preventDefault();
     const { numQuestions, difficulty, type } = settings;
     if (difficulty === "easy") {
@@ -32,6 +38,9 @@ function App() {
       setQuestions(getMediumQuestions(numQuestions, type));
     } else if (difficulty === "hard") {
       setQuestions(getHardQuestions(numQuestions, type));
+    }
+    else {
+      setQuestions(getAnyDiff(numQuestions, type));
     }
     setStart(false);
   }
