@@ -1,7 +1,7 @@
 import { MCQuestionType, TFQuestionType } from "../types";
 import { useCallback, useEffect, useState } from "react";
 import Question from "./Question";
-import "../src/QuestionPage.css"
+import "../src/QuestionPage.css";
 
 type QuestionPageType = {
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,16 +14,15 @@ export default function QuestionPage({
   questions,
   handleClick,
 }: QuestionPageType) {
-
   const [answered, setAnswered] = useState<(string | boolean)[]>([]);
   const [submitted, setSubmitted] = useState(false);
 
-  function getScore() : number {
+  function getScore(): number {
     let correct = 0;
     for (let i = 0; i < answered.length; ++i) {
-        if (answered[i] === questions[i].correct) {
-            correct++;
-        }
+      if (answered[i] === questions[i].correct) {
+        correct++;
+      }
     }
     return correct;
   }
@@ -31,12 +30,12 @@ export default function QuestionPage({
   useEffect(() => {
     setAnswered([]);
     setSubmitted(false);
-  }, [questions])
+  }, [questions]);
 
   function fun(choice: string | boolean, ind: number) {
     setAnswered((prev) => {
       const newAnswered = [...prev];
-      newAnswered[ind] = (newAnswered[ind] === choice) ? '' : choice;
+      newAnswered[ind] = newAnswered[ind] === choice ? "" : choice;
       return newAnswered;
     });
   }
@@ -44,7 +43,7 @@ export default function QuestionPage({
   const handleChange = useCallback(fun, []);
 
   function checkDone() {
-    console.log(answered)
+    console.log(answered);
     if (answered.length !== questions.length) return false;
     for (const answer of answered) {
       if (answer === "" || answer === undefined) {
@@ -66,26 +65,41 @@ export default function QuestionPage({
   ));
 
   return (
-        <div className="questions-page">
-            <section className="question-list">
-                {questionElements}
-            </section>
-            <div className="questions-footer">
-            {submitted ? (
-                <>
-                    <span className="score">You scored {getScore()}/{questions.length} answers</span>
-                    <button onClick={() => setStart(true)} className="questions-submit">Change Settings</button>
-                    <button onClick={handleClick} className="questions-submit">Play Again</button>
-                </>
-            ) : done ? <button onClick={() => setSubmitted(true)} className="questions-submit">Check Answers</button>
-            : (
-
-                <>
+    <div className="questions-page">
+      <section className="question-list">{questionElements}</section>
+      <div className="questions-footer">
+        {submitted ? (
+          <>
+            <span className="score">
+              You scored {getScore()}/{questions.length} answers
+            </span>
+            <button onClick={() => setStart(true)} className="questions-submit">
+              Change Settings
+            </button>
+            <button onClick={handleClick} className="questions-submit">
+              Play Again
+            </button>
+          </>
+        ) : done ? (
+          <button
+            onClick={() => setSubmitted(true)}
+            className="questions-submit"
+          >
+            Check Answers
+          </button>
+        ) : (
+          <>
             <p>Select an answer for all questions!</p>
-            <button disabled onClick={() => setSubmitted(true)} className="questions-submit disabled-button">Check Answers</button>
-            </>
-            )}
-        </div>
-        </div>
+            <button
+              disabled
+              onClick={() => setSubmitted(true)}
+              className="questions-submit disabled-button"
+            >
+              Check Answers
+            </button>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

@@ -1,25 +1,24 @@
-.question-text{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    margin: 15px auto;
-    max-width: 70%;
-    
+.question-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 15px auto;
+  max-width: 70%;
 }
 
-.question-border{
-    border: 0.794239px solid #DBDEF0;
-    margin: 20px auto 30px;
-    width: 600px;
+.question-border {
+  border: 0.794239px solid black;
+  margin: 20px auto 30px;
+  width: 600px;
 }
 
-.question-buttons{
-    display: flex;
-    gap: 15px;
-    max-width: 70%;
-    margin:0 auto;
+.question-buttons {
+  display: flex;
+  gap: 15px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 .question {
-    width: 100%;
+  width: 100%;
 }

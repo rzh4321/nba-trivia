@@ -1,39 +1,40 @@
 button.make-green {
-    background-color: #94D7A2;
+  background-color: #94d7a2;
 }
 
 button.make-red {
-    background-color: #F8BCBC;
+  background-color: #f8bcbc;
 }
 
 button.make-selected {
-    background-color: rgb(188, 165, 242);
+  background-color: rgb(188, 165, 242);
 }
 
 .choice-button {
-    border: 0.8px solid #4D5B9E;
-    background-color: white;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 8px;
-    cursor: pointer;
-    min-height: 30px;
-    min-width: 100px;
-    max-width: 150px;
+  border: 0.8px solid #4d5b9e;
+  background-color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 30px;
+  min-width: 100px;
+  max-width: 150px;
 }
 
-button.make-red, button.make-selected {
-    border: 0.8px;
+button.make-red,
+button.make-selected {
+  border: 0.8px;
 }
 
 .light {
-    opacity: 0.5;
-    pointer-events: none;
-    border: none;
+  opacity: 0.5;
+  pointer-events: none;
+  border: none;
 }
 
-.button-text{
-    font-family: 'Inter';
-    font-weight: 500;
-    font-size: 12px;
-    background: none;
+.button-text {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 12px;
+  background: none;
 }

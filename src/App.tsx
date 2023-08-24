@@ -3,7 +3,7 @@ import {
   getEasyQuestions,
   getMediumQuestions,
   getHardQuestions,
-  getAnyDiff
+  getAnyDiff,
 } from "../utils";
 import StartScreen from "../components/StartScreen";
 import QuestionPage from "../components/QuestionPage";
@@ -23,13 +23,13 @@ function App() {
   });
 
   useEffect(() => {
-    console.log('rendering APp')
-  })
+    console.log("rendering APp");
+  });
 
   function handleClick(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ): void {
-    console.log('in handle click')
+    console.log("in handle click");
     e.preventDefault();
     const { numQuestions, difficulty, type } = settings;
     if (difficulty === "easy") {
@@ -38,8 +38,7 @@ function App() {
       setQuestions(getMediumQuestions(numQuestions, type));
     } else if (difficulty === "hard") {
       setQuestions(getHardQuestions(numQuestions, type));
-    }
-    else {
+    } else {
       setQuestions(getAnyDiff(numQuestions, type));
     }
     setStart(false);
@@ -47,15 +46,19 @@ function App() {
 
   return (
     <>
-      {
-        start? 
-        (<StartScreen
-        settings={settings}
-        setSettings={setSettings}
-        handleClick={handleClick}
-      ></StartScreen>) :
-      <QuestionPage setStart={setStart} questions={questions} handleClick={handleClick} />
-      }
+      {start ? (
+        <StartScreen
+          settings={settings}
+          setSettings={setSettings}
+          handleClick={handleClick}
+        ></StartScreen>
+      ) : (
+        <QuestionPage
+          setStart={setStart}
+          questions={questions}
+          handleClick={handleClick}
+        />
+      )}
     </>
   );
 }
