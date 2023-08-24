@@ -1,6 +1,10 @@
 body {
   font-family: Karla, Sans-serif;
-
+  background-image: url("https://4kwallpapers.com/images/wallpapers/sunrise-blue-sky-panorama-early-morning-dawn-5k-2048x1536-3644.jpg");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  color: black;
   padding: 0;
+  box-sizing: border-box;
   margin: 0;
 }

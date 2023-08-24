@@ -1,6 +1,7 @@
 import { MCQuestionType, TFQuestionType } from "../types";
 import { useCallback, useEffect, useState } from "react";
 import Question from "./Question";
+import "../src/QuestionPage.css"
 
 type QuestionPageType = {
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
@@ -18,7 +19,13 @@ export default function QuestionPage({
   const [submitted, setSubmitted] = useState(false);
 
   function getScore() : number {
-    return 1;
+    let correct = 0;
+    for (let i = 0; i < answered.length; ++i) {
+        if (answered[i] === questions[i].correct) {
+            correct++;
+        }
+    }
+    return correct;
   }
 
   useEffect(() => {
@@ -59,22 +66,26 @@ export default function QuestionPage({
   ));
 
   return (
-    <>
-      {questionElements}
-      {submitted ? (
-        <>
-            <span>You scored {getScore()}/{questions.length} answers</span>
-            <button onClick={() => setStart(true)}>Change Settings</button>
-            <button onClick={handleClick}>Play Again</button>
-        </>
-      ) : done ? <button onClick={() => setSubmitted(true)}>Check Answers</button>
-      : (
+        <div className="questions-page">
+            <section className="question-list">
+                {questionElements}
+            </section>
+            <div className="questions-footer">
+            {submitted ? (
+                <>
+                    <span className="score">You scored {getScore()}/{questions.length} answers</span>
+                    <button onClick={() => setStart(true)} className="questions-submit">Change Settings</button>
+                    <button onClick={handleClick} className="questions-submit">Play Again</button>
+                </>
+            ) : done ? <button onClick={() => setSubmitted(true)} className="questions-submit">Check Answers</button>
+            : (
 
-        <>
-      <span>Select an answer for all questions!</span>
-      <button disabled onClick={() => setSubmitted(true)}>Check Answers</button>
-      </>
-      )}
-    </>
+                <>
+            <p>Select an answer for all questions!</p>
+            <button disabled onClick={() => setSubmitted(true)} className="questions-submit disabled-button">Check Answers</button>
+            </>
+            )}
+        </div>
+        </div>
   );
 }

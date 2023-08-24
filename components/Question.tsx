@@ -2,6 +2,7 @@ import { MCQuestionType, TFQuestionType } from "../types";
 import { useEffect } from "react";
 import React from "react";
 import Choice from './Choice';
+import "../src/Question.css";
 
 type QuestionType = {
   ind: number;
@@ -39,29 +40,20 @@ const Question = React.memo(({
       ind={ind}
       choice={choice}
       handleChange={handleChange}
-      selected={choice === userAnswer}
-      makeGreen={submitted && question.correct === choice}
+      color={(submitted && question.correct === choice)? 'green' : submitted ? (choice === userAnswer) ? 'red' : '' : (choice === userAnswer) ? 'blue' : ''}
+      opacity={(submitted && question.correct === choice) ? '' : submitted? 'light' : ''}
     />
   ));
 
-  // const choiceElements = choices.map(choice =>
-  //     (
-  //         <input
-  //             type='radio'
-  //             name='choice'
-  //             value={choice}
-  //             disabled={submitted}
-  //             checked={}
-  //         />
-  //     )
-
-  // )
 
   return (
     <>
       <div className="question">
-        <span className="question-text">{question.question}</span>
-        {choiceElements}
+        <h3 className="question-text">{question.question}</h3>
+        <div className="question-buttons">
+            {choiceElements}
+        </div>
+        <hr className="question-border" />
       </div>
     </>
   );

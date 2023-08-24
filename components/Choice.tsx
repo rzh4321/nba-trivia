@@ -4,11 +4,25 @@ type ChoiceType = {
     ind: number;
     choice: string;
     handleChange: (choice: string | boolean, ind: number) => void;
-    selected: boolean;
-    makeGreen: boolean;
+    color: string;
+    opacity: string;
 }
 
 
-export default function Choice({ind, choice, handleChange, selected, makeGreen} : ChoiceType) {
-    return <button className={`choice-button ${selected? 'selected-choice' : ''} ${makeGreen? 'make-green': ''}`} onClick={() => handleChange(choice, ind)}>{choice}</button>
+export default function Choice({ind, choice, handleChange, color, opacity} : ChoiceType) {
+    let colorClass : string ;
+    switch (color) {
+        case 'red':
+            colorClass = 'make-red';
+            break;
+        case 'green':
+            colorClass = 'make-green';
+            break;
+        case 'blue':
+            colorClass = 'make-selected';
+            break;
+        default:
+            colorClass = '';
+    }
+    return <button className={`choice-button ${colorClass} ${opacity}`} onClick={() => handleChange(choice, ind)}><span className='button-text'>{choice}</span></button>
 }
