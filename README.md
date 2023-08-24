@@ -1,27 +1,18 @@
-# React + TypeScript + Vite
+# NBA Trivia Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to NBA Trivia, an interactive web app that allows basketball enthusiasts to test their NBA knowledge. This project is built using TypeScript, React, Vite, and CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Customization:** Start screen allows players to customize their gameplay by choosing:
+  - Number of questions
+  - Types of questions
+  - Difficulty levels
 
-## Expanding the ESLint configuration
+- **Manual Question Creation:** A curated library of trivia questions and answers, ensuring accuracy and relevance without relying on external APIs.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## What I Learned
 
-- Configure the top-level `parserOptions` property like this:
+1. **TypeScript + React:** This project marked my first time ever using TypeScript, and it was an excellent opportunity to learn and apply strong typing to my code. Integrating TypeScript with React provided me with a deeper understanding of both technologies and how they can work together.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. **React Optimizations:** I only knew how React.memo and the useCallback worked in theory, but I had never applied them. These optimizations not only improved the overall performance of the application but also introduced me to best practices for writing efficient React code.
