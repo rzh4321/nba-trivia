@@ -36,5 +36,22 @@ button.make-selected {
   font-family: "Inter";
   font-weight: 500;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
 }
+
+@media screen and (max-width: 500px) {
+    .choice-button {
+        width: 80px;
+        min-width: 0px;
+    }
+
+    .button-text {
+        font-size: 10px;
+    }
+    
+  }
+
+  

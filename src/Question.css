@@ -1,6 +1,6 @@
 .question-text {
   font-weight: 700;
-  font-size: 16px;
+  font-size: clamp(8px, 4vw, 18px);
   line-height: 20px;
   margin: 15px auto;
   max-width: 70%;
@@ -22,3 +22,17 @@
 .question {
   width: 100%;
 }
+
+/* Styles for screens smaller than 470px */
+@media screen and (max-width: 470px) {
+    .question-text {
+        max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .question-buttons {
+        width: 50%;
+    }
+    
+  }
