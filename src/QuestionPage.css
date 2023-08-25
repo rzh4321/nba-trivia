@@ -26,6 +26,11 @@
   font-size: 14px;
   color: #f5f7fb;
   cursor: pointer;
+  transition: 0.5s all;
+}
+
+.questions-submit:hover {
+  background-color: #94d7a2;
 }
 
 .questions-page {

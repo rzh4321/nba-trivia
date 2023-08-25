@@ -1,5 +1,6 @@
 button.make-green {
   background-color: #94d7a2;
+  pointer-events: none;
 }
 
 button.make-red {
@@ -7,7 +8,7 @@ button.make-red {
 }
 
 button.make-selected {
-  background-color: rgb(188, 165, 242);
+  background-color: skyblue;
 }
 
 .choice-button {
@@ -19,6 +20,11 @@ button.make-selected {
   min-height: 30px;
   min-width: 100px;
   max-width: 150px;
+  transition: 0.5s all;
+}
+
+.choice-button:hover {
+  background-color: skyblue;
 }
 
 button.make-red,
