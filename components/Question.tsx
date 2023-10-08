@@ -11,6 +11,16 @@ type QuestionType = {
   userAnswer: boolean | string | undefined;
 };
 
+/* When a user selects a choice, the handleChange prop will run which changes
+the "answered" array state in QuestionPage. This re-renders QuestionPage and
+therefore re-renders Question, which re-renders Choice. This will happen even
+if the choice lives in another question, so even if a user selects a choice in
+an entirely diff question, every choice will re-render. That's why React.memo
+is used to memoize Question--if the change has nothing to do with this particular
+question, don't re-render it. The handleChange function will also be memoized
+using useCallback so that React.memo works
+*/
+
 const Question = React.memo(
   ({ ind, question, handleChange, submitted, userAnswer }: QuestionType) => {
     const choices: string[] = [];

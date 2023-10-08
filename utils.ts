@@ -13,7 +13,6 @@ function getRandomElementsFromArray(
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
-  console.log("in getRandomElements");
   // Slice the shuffled array to get the desired number of elements
   return shuffledArray.slice(0, numElements);
 }

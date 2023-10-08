@@ -20,6 +20,7 @@ export default function QuestionPage({
   function getScore(): number {
     let correct = 0;
     for (let i = 0; i < answered.length; ++i) {
+      // check if user choice matches correct choice
       if (answered[i] === questions[i].correct) {
         correct++;
       }
@@ -27,25 +28,30 @@ export default function QuestionPage({
     return correct;
   }
 
+  // when user clicks "Play Again", new questions are set so we need to
+  // reset user answers back to an empty array
   useEffect(() => {
     setAnswered([]);
     setSubmitted(false);
   }, [questions]);
 
+  // choice is user choice. Ind is the question's ind
   function fun(choice: string | boolean, ind: number) {
     setAnswered((prev) => {
       const newAnswered = [...prev];
+      // if this choice was already chosen, unselect it by setting it to ""
       newAnswered[ind] = newAnswered[ind] === choice ? "" : choice;
       return newAnswered;
     });
   }
 
+  // logic for selecting a choice for a question is memoized
   const handleChange = useCallback(fun, []);
 
   function checkDone() {
-    console.log(answered);
     if (answered.length !== questions.length) return false;
     for (const answer of answered) {
+      // if an answer is "" or undefined, this question hasnt been answered
       if (answer === "" || answer === undefined) {
         return false;
       }

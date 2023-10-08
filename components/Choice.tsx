@@ -32,7 +32,7 @@ export default function Choice({
   return (
     <button
       className={`choice-button ${colorClass} ${opacity}`}
-      onClick={() => handleChange(choice, ind)}
+      onClick={() => handleChange(choice, ind)} // handleChange re-renders only this question
     >
       <span className="button-text">{choice}</span>
     </button>

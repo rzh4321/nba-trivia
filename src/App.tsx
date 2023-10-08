@@ -22,14 +22,12 @@ function App() {
     type: "any",
   });
 
-  useEffect(() => {
-    console.log("rendering APp");
-  });
 
+  // called when "Start Quiz" or "Play Again" is clicked
+  // gets random questions according to selected settings
   function handleClick(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ): void {
-    console.log("in handle click");
     e.preventDefault();
     const { numQuestions, difficulty, type } = settings;
     if (difficulty === "easy") {
@@ -41,6 +39,7 @@ function App() {
     } else {
       setQuestions(getAnyDiff(numQuestions, type));
     }
+    // display quiz page after setting questions
     setStart(false);
   }
 
