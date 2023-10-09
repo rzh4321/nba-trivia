@@ -26,7 +26,7 @@ export default function StartScreen({
   }
   return (
     <div className="start-container">
-      <h1 className="start-title">NBA Trivia</h1>
+      <h1 className="start-title">HoopsIQ</h1>
       <p className="start-text">Test your NBA knowledge!</p>
       <form className="start-form">
         <div className="form-element">
