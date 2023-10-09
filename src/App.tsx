@@ -9,7 +9,7 @@ import StartScreen from "../components/StartScreen";
 import QuestionPage from "../components/QuestionPage";
 import "./App.css";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [start, setStart] = useState(true);
