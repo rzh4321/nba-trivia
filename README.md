@@ -17,6 +17,8 @@ Welcome to NBA Trivia, an interactive web app that allows basketball enthusiasts
 
 2. **React Optimizations:** I only knew how React.memo and the useCallback worked in theory, but I had never applied them. These optimizations not only improved the overall performance of the application but also introduced me to best practices for writing efficient React code.
 
+# Menu Page
 ![Menu Page](./src/assets/home.png)
 
+# Quiz Page
 ![Quiz Page](./src/assets/quiz.png)
